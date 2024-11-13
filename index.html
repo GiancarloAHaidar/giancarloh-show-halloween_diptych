@@ -123,30 +123,60 @@
       /* Project Showcase Section */
       .project-showcase {
         padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .project-title {
         font-size: 2rem;
         font-weight: bold;
         color: #333;
-        margin-bottom: 20px;
+        margin: 20px 0;
+        text-align: center;
       }
 
       .project-description {
         font-size: 1rem;
         color: #666;
-        margin-bottom: 20px;
+        margin: 20px 0;
         max-width: 800px;
+        text-align: center;
+      }
+
+      /* Project Images Section */
+      .project-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      .project-image {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
       }
 
       .project-media {
         display: flex;
         gap: 20px;
-        flex-wrap: wrap;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 800px;
       }
 
       .media-item {
-        flex: 1 1 48%;
+        flex: 1;
         border-radius: 8px;
         overflow: hidden;
       }
@@ -194,10 +224,6 @@
         background-color: #f6f6f6;
       }
 
-      .footer .footer-section strong {
-        margin-bottom: 10px;
-      }
-
       .footer .contact-message {
         text-align: left;
         font-size: 1.2rem;
@@ -231,34 +257,33 @@
         <a href="#TELL" target="_self">Tell</a>
       </div>
       <div class="header-right">
-        <a href="index.html" target="_self">X</a> <!-- Exit button as a link to the main page (index.html) -->
+        <a href="index.html" target="_self">X</a>
       </div>
     </header>
 
     <!-- Project Showcase Section -->
     <div class="container project-showcase">
+      <div class="project-images">
+        <div class="project-image">
+          <img src="sun_life_mockup.jpg" alt="Sun Life Design Jam Image">
+        </div>
+      </div>
+
       <h2 class="project-title">Sun Life Design Jam</h2>
       <p class="project-description">
-        I participated in a sponsored event where our team was tasked with creating a solution to help individuals aged 24-35 develop financial fluency. Our team developed a general tax knowledge app with gamification elements to make it easier to understand and manage financial situations and tax benefits. This app aims to enhance financial literacy through engaging and interactive experiences.
+        I participated in a sponsored event where our team was tasked with creating something to help people aged 24-35 develop financial fluency. Our team developed a general tax knowledge app with gamification to help users better understand their financial situation and tax benefits.
       </p>
 
-      <!-- Project Media Section with Mockup Images -->
+      <!-- Project Media Section with Image and Google Slides Side-by-Side -->
       <div class="project-media">
-        <!-- Mockup Image 1 -->
+        <!-- Additional Image -->
         <div class="media-item">
-          <img src="sun_life_mockup_1.jpg" alt="Sun Life App Mockup 1">
+          <img src="sun_life_additional_image.jpg" alt="Additional Project Image" width="100%" height="500">
         </div>
-        <!-- Mockup Image 2 -->
+
+        <!-- Google Slides Embed -->
         <div class="media-item">
-          <img src="sun_life_mockup_2.jpg" alt="Sun Life App Mockup 2">
-        </div>
-        <!-- Mockup Image 3 -->
-        <div class="media-item">
-          <img src="sun_life_mockup_3.jpg" alt="Sun Life App Mockup 3">
-        </div>
-        <!-- Mockup Image 4 -->
-        <div class="media-item">
-          <img src="sun_life_mockup_4.jpg" alt="Sun Life App Mockup 4">
+          <iframe src="https://docs.google.com/presentation/d/e/YOUR_PRESENTATION_ID/embed?start=false&loop=false" width="100%" height="500" allowfullscreen></iframe>
         </div>
       </div>
     </div>
