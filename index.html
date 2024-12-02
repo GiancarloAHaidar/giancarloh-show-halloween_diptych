@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="EN-CA">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Low-Fidelity Instagram Redesign - Giancarlo A. Haidar's Portfolio</title>
     <!-- Link to Google Fonts for Roboto and Archivo -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Google Fonts for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts for Archivo -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style>
-      /* Basic Reset */
+      /* CSS Universal (*) Selector: https://www.w3schools.com/cssref/sel_all.php */
       * {
         margin: 0;
         padding: 0;
@@ -21,17 +26,15 @@
         font-family: 'Archivo', sans-serif;
       }
 
-      /* Full-width Container */
       .container {
         width: 100%;
         padding: 0 60px;
-        max-width: 1600px;
         margin: auto;
       }
 
-      /* Header */
       .header {
         display: flex;
+        /* CSS justify-content Property: https://www.w3schools.com/cssref/css3_pr_justify-content.php */
         justify-content: space-between;
         align-items: center;
         position: sticky;
@@ -74,6 +77,7 @@
       .header-center {
         position: absolute;
         left: 50%;
+        /* CSS transform Property: https://www.w3schools.com/cssref/css3_pr_transform.php */
         transform: translateX(-50%);
         display: flex;
         gap: 60px;
@@ -97,8 +101,8 @@
         background-color: #333;
       }
 
-      .header-center a:hover {
-        background-color: #f6f6f6;
+      .header-center a.active {
+        color: #000;
       }
 
       .header-right a {
@@ -106,22 +110,26 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 1.5rem;
+        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
+        transition: color 0.3s;
         display: flex;
         align-items: center;
-        transition: color 0.3s;
       }
 
       .header-right a:hover {
         color: #005582;
       }
 
-      /* Link Hover Effect */
-      a:hover {
+      .header-center a:hover {
         background-color: #f6f6f6;
-        transition: background-color 0.3s;
       }
 
-      /* Project Showcase Section */
+      a:hover {
+        background-color: #f6f6f6;
+        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
+        transition: background-color 0.3s ease;
+      }
+
       .project-showcase {
         padding: 40px 60px;
       }
@@ -140,6 +148,7 @@
       .project-media-section {
         display: flex;
         gap: 20px;
+        /* CSS justify-content Property: https://www.w3schools.com/cssref/css3_pr_justify-content.php */
         justify-content: space-between;
         margin-top: 20px;
       }
@@ -151,11 +160,10 @@
         text-align: left;
         position: sticky;
         top: 100px;
-        /* Adjust this value based on your header height */
+        /* CSS calc() Function: https://www.w3schools.com/cssref/func_calc.php */
         max-height: calc(100vh - 120px);
-        /* Ensure it stays visible */
+        /* CSS overflow-y Property: https://www.w3schools.com/cssref/css3_pr_overflow-y.php */
         overflow-y: auto;
-        /* Allow scrolling within the sticky element */
         padding-right: 10px;
       }
 
@@ -179,6 +187,7 @@
         font-size: 1rem;
         color: #666;
         display: flex;
+        /* CSS justify-content Property: https://www.w3schools.com/cssref/css3_pr_justify-content.php */
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
