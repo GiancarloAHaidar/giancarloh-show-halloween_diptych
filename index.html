@@ -142,7 +142,19 @@
       .project-image-placeholder img {
         width: 100%;
         height: auto;
+        max-height: 60vw;
+        /* Default for small screens */
+        object-fit: cover;
+        /* Ensures the image covers the area while maintaining aspect ratio */
+        object-position: center;
+        /* Centers the image within the container */
+      }
 
+      @media (min-width: 768px) {
+        .project-image-placeholder img {
+          max-height: 49vw;
+          /* For medium and larger screens */
+        }
       }
 
       .project-media-section {
@@ -154,18 +166,17 @@
       }
 
       .project-description {
-        flex: 1;
-        font-size: 1rem;
-        color: #666;
-        text-align: left;
-        position: sticky;
-        top: 100px;
-        /* CSS calc() Function: https://www.w3schools.com/cssref/func_calc.php */
-        max-height: calc(100vh - 120px);
-        /* CSS overflow-y Property: https://www.w3schools.com/cssref/css3_pr_overflow-y.php */
-        overflow-y: auto;
-        padding-right: 10px;
-      }
+  width: 33%; /* Set the width to 30% */
+  flex: none; /* Override any conflicting flexbox settings */
+  font-size: 1rem;
+  color: #666;
+  text-align: left;
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
 
       .project-pdf-placeholder {
         flex: 1;
