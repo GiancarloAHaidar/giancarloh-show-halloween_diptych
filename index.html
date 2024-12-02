@@ -166,17 +166,21 @@
       }
 
       .project-description {
-  width: 33%; /* Set the width to 30% */
-  flex: none; /* Override any conflicting flexbox settings */
-  font-size: 1rem;
-  color: #666;
-  text-align: left;
-  position: sticky;
-  top: 100px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  padding-right: 10px;
-}
+        width: 33%;
+        /* Set the width to 30% */
+        flex: none;
+        /* Override any conflicting flexbox settings */
+        font-size: 1rem;
+        color: #666;
+        text-align: left;
+        position: sticky;
+        top: 100px;
+        /* CSS calc() Function: https://www.w3schools.com/cssref/func_calc.php */
+        max-height: calc(100vh - 120px);
+        /* CSS overflow-y Property: https://www.w3schools.com/cssref/css3_pr_overflow-y.php */
+        overflow-y: auto;
+        padding-right: 10px;
+      }
 
       .project-pdf-placeholder {
         flex: 1;
@@ -188,6 +192,7 @@
         width: 100%;
         height: auto;
         margin-bottom: 20px;
+        border-radius: 10px;
         border-left: 1px solid rgb(246, 246, 246);
         border-right: 1px solid rgb(246, 246, 246);
       }
