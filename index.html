@@ -7,8 +7,8 @@
     <!-- Link to Google Fonts for Roboto and Archivo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
@@ -118,12 +118,6 @@
         background-color: #f6f6f6;
       }
 
-      @media (max-width: 768px) {
-        .header-center {
-          display: none;
-        }
-      }
-
       a:hover {
         background-color: #f6f6f6;
         transition: background-color 0.3s ease;
@@ -152,16 +146,13 @@
         }
       }
 
-      .project-media-section {
+      .project-layout {
         display: flex;
         gap: 20px;
-        justify-content: space-between;
-        margin-top: 20px;
       }
 
       .project-description {
-        width: 33%;
-        flex: none;
+        flex: 1 1 33%;
         font-size: 1rem;
         color: #666;
         text-align: left;
@@ -169,31 +160,94 @@
         top: 100px;
         max-height: calc(100vh - 120px);
         overflow-y: auto;
-        padding-right: 10px;
+        padding: 20px 0;
+        /* Added top and bottom padding */
       }
 
-      .project-description ul {
-        list-style-type: disc;
-        padding-left: 20px;
-        margin: 10px 0;
+      .project-details-and-images {
+        flex: 2 1 66%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
 
-      .project-description li {
+      .project-details {
+        padding: 20px 0;
+        /* Added top and bottom padding */
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .details-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .details-item {
+        flex: 1 1 200px;
+        margin-right: 20px;
+      }
+
+      .details-label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #777;
+        text-transform: uppercase;
         margin-bottom: 5px;
       }
 
+      .details-value {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+        line-height: 1.4;
+      }
+
+      .details-value br {
+        line-height: 1.8;
+        /* Adds extra spacing between multiple lines */
+      }
+
       .project-pdf-placeholder {
-        flex: 1;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        /* Matches the width of the project-details */
+      }
+
+      .project-pdf-placeholder figure {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align captions to the left */
+        text-align: left;
+        /* Align text within captions to the left */
       }
 
       .project-pdf-placeholder img {
         width: 100%;
+        /* Aligns with the width of the project-details */
         height: auto;
-        margin-bottom: 20px;
         border-radius: 10px;
         border-left: 1px solid rgb(246, 246, 246);
         border-right: 1px solid rgb(246, 246, 246);
+      }
+
+      .project-pdf-placeholder figcaption {
+        margin-top: 10px;
+        font-size: 0.85rem;
+        font-family: 'Roboto', sans-serif;
+        color: #666;
+        text-align: left;
+        /* Align text to the left */
+        padding: 5px;
+        letter-spacing: 1px;
+        background-color: transparent;
+        /* Removed background */
       }
 
       .footer {
@@ -278,19 +332,55 @@
     </header>
 
     <div class="container project-showcase">
+      <!-- Diptych Poster Image -->
       <div class="project-image-placeholder">
-        <img src="Diptych Poster.jpg" alt="Video Placeholder">
+        <img src="Diptych Poster.jpg" alt="Diptych Poster featuring creative visuals">
       </div>
-      <div class="project-media-section">
+
+      <div class="project-layout">
+        <!-- Left Column: Sticky Description -->
         <div class="project-description">
           <ul>
-            <li>I participated in a Sun Life sponsored Design Jam where our team was tasked with creating a solution to help individuals aged 24-35 develop financial fluency. Our team developed a general tax knowledge app with gamification elements to make it easier to understand and manage financial situations and tax benefits. This app aims to enhance financial literacy through engaging and interactive experiences.</li>
-
+            <li>
+              I participated in a Sun Life sponsored Design Jam where our team was tasked with creating a solution to help individuals aged 24-35 develop financial fluency. Our team developed a general tax knowledge app with gamification elements to make it easier to understand and manage financial situations and tax benefits. This app aims to enhance financial literacy through engaging and interactive experiences.
+            </li>
           </ul>
         </div>
-        <div class="project-pdf-placeholder">
-          <img src="Diptych Poster Left.jpg" alt="PDF Placeholder">
-          <img src="Diptych Poster Right.jpg" alt="Additional Image 1">
+
+        <!-- Right Column: Details and Images -->
+        <div class="project-details-and-images">
+          <!-- Details Row -->
+          <div class="project-details">
+            <div class="details-row">
+              <div class="details-item">
+                <span class="details-label">Role</span>
+                <span class="details-value">Design Consultant</span>
+              </div>
+              <div class="details-item">
+                <span class="details-label">Collaborators</span>
+                <span class="details-value">Jerry Yue (CEO)<br>Gleb Kuznetsov</span>
+              </div>
+              <div class="details-item">
+                <span class="details-label">Duration</span>
+                <span class="details-value">2020-2021</span>
+              </div>
+              <div class="details-item">
+                <span class="details-label">Tools</span>
+                <span class="details-value">Figma<br>Origami Studio</span>
+              </div>
+            </div>
+          </div>
+          <!-- Images with Left-Aligned Captions -->
+          <div class="project-pdf-placeholder">
+            <figure>
+              <img src="Diptych Poster Left.jpg" alt="Left side of the Halloween Diptych poster">
+              <figcaption>DIPTYCH POSTER LEFT</figcaption>
+            </figure>
+            <figure>
+              <img src="Diptych Poster Right.jpg" alt="Right side of the Halloween Diptych poster">
+              <figcaption>DIPTYCH POSTER RIGHT</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
