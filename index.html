@@ -7,12 +7,9 @@
     <!-- Link to Google Fonts for Roboto and Archivo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Link to Google Fonts for Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- Link to Google Fonts for Archivo -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style>
-      /* CSS Universal (*) Selector: https://www.w3schools.com/cssref/sel_all.php */
       * {
         margin: 0;
         padding: 0;
@@ -34,7 +31,6 @@
 
       .header {
         display: flex;
-        /* CSS justify-content Property: https://www.w3schools.com/cssref/css3_pr_justify-content.php */
         justify-content: space-between;
         align-items: center;
         position: sticky;
@@ -77,7 +73,6 @@
       .header-center {
         position: absolute;
         left: 50%;
-        /* CSS transform Property: https://www.w3schools.com/cssref/css3_pr_transform.php */
         transform: translateX(-50%);
         display: flex;
         gap: 60px;
@@ -110,7 +105,6 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 1.5rem;
-        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
         transition: color 0.3s;
         display: flex;
         align-items: center;
@@ -124,9 +118,14 @@
         background-color: #f6f6f6;
       }
 
+      @media (max-width: 768px) {
+        .header-center {
+          display: none;
+        }
+      }
+
       a:hover {
         background-color: #f6f6f6;
-        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
         transition: background-color 0.3s ease;
       }
 
@@ -143,49 +142,49 @@
         width: 100%;
         height: auto;
         max-height: 60vw;
-        /* Default for small screens */
         object-fit: cover;
-        /* Ensures the image covers the area while maintaining aspect ratio */
         object-position: center;
-        /* Centers the image within the container */
       }
 
       @media (min-width: 768px) {
         .project-image-placeholder img {
           max-height: 49vw;
-          /* For medium and larger screens */
         }
       }
 
       .project-media-section {
         display: flex;
         gap: 20px;
-        /* CSS justify-content Property: https://www.w3schools.com/cssref/css3_pr_justify-content.php */
         justify-content: space-between;
         margin-top: 20px;
       }
 
       .project-description {
         width: 33%;
-        /* Set the width to 30% */
         flex: none;
-        /* Override any conflicting flexbox settings */
         font-size: 1rem;
         color: #666;
         text-align: left;
         position: sticky;
         top: 100px;
-        /* CSS calc() Function: https://www.w3schools.com/cssref/func_calc.php */
         max-height: calc(100vh - 120px);
-        /* CSS overflow-y Property: https://www.w3schools.com/cssref/css3_pr_overflow-y.php */
         overflow-y: auto;
         padding-right: 10px;
+      }
+
+      .project-description ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin: 10px 0;
+      }
+
+      .project-description li {
+        margin-bottom: 5px;
       }
 
       .project-pdf-placeholder {
         flex: 1;
         text-align: center;
-
       }
 
       .project-pdf-placeholder img {
@@ -197,13 +196,11 @@
         border-right: 1px solid rgb(246, 246, 246);
       }
 
-      /* Footer */
       .footer {
         padding: 20px 60px;
         font-size: 1rem;
         color: #666;
         display: flex;
-        /* CSS justify-content Property: https://www.w3schools.com/cssref/css3_pr_justify-content.php */
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
@@ -266,7 +263,6 @@
     </style>
   </head>
   <body>
-    <!-- Header -->
     <header class="header">
       <div class="header-left">
         <h1>Halloween Diptych</h1>
@@ -281,15 +277,17 @@
       </div>
     </header>
 
-    <!-- Project Showcase -->
     <div class="container project-showcase">
       <div class="project-image-placeholder">
         <img src="Diptych Poster.jpg" alt="Video Placeholder">
       </div>
       <div class="project-media-section">
-        <p class="project-description">
-          I participated in a Sun Life sponsored Design Jam where our team was tasked with creating a solution to help individuals aged 24-35 develop financial fluency. Our team developed a general tax knowledge app with gamification elements to make it easier to understand and manage financial situations and tax benefits. This app aims to enhance financial literacy through engaging and interactive experiences.
-        </p>
+        <div class="project-description">
+          <ul>
+            <li>I participated in a Sun Life sponsored Design Jam where our team was tasked with creating a solution to help individuals aged 24-35 develop financial fluency. Our team developed a general tax knowledge app with gamification elements to make it easier to understand and manage financial situations and tax benefits. This app aims to enhance financial literacy through engaging and interactive experiences.</li>
+
+          </ul>
+        </div>
         <div class="project-pdf-placeholder">
           <img src="Diptych Poster Left.jpg" alt="PDF Placeholder">
           <img src="Diptych Poster Right.jpg" alt="Additional Image 1">
@@ -297,7 +295,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="footer-section">
         <strong>Main</strong>
