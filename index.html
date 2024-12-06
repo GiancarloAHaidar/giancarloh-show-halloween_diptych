@@ -3,29 +3,41 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low-Fidelity Instagram Redesign - Giancarlo A. Haidar's Portfolio</title>
-    <!-- Link to Google Fonts for Roboto and Archivo -->
+    <title>Giancarlo A. Haidar-Tell-Halloween Diptych</title>
+    <!-- Link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts for Archivo -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Link to Stylesheet -->
+
     <style>
       * {
-        margin: 0;
-        padding: 0;
+        color: #ffffff;
+        margin: 0px;
+        padding: 0px;
         box-sizing: border-box;
+        background-color: #0D0208;
+      }
+
+      html,
+      body {
+        height: 100%;
       }
 
       body {
+        display: flex;
+        flex-direction: column;
         line-height: 1.6;
-        color: #333;
         scroll-behavior: smooth;
         font-family: 'Archivo', sans-serif;
       }
 
       .container {
         width: 100%;
-        padding: 0 60px;
+        padding: 0px 60px;
         margin: auto;
       }
 
@@ -34,24 +46,27 @@
         justify-content: space-between;
         align-items: center;
         position: sticky;
-        top: 0;
-        background-color: #ffffff;
+        top: 0px;
         padding: 15px 60px;
         z-index: 1000;
         font-family: 'Roboto', sans-serif;
       }
 
-      .header::after {
+      .header:after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
         left: 60px;
         right: 60px;
         height: 2px;
-        background-color: #f6f6f6;
+        background-color: #292929ff;
       }
 
       .header-left {
+        text-align: left;
+      }
+
+      ..header-left {
         text-align: left;
       }
 
@@ -61,18 +76,24 @@
       }
 
       .header h1 {
-        font-size: 1.5rem;
-        color: #333;
+        font-size: 1.3rem;
       }
 
       .header h2 {
         font-size: 1rem;
-        color: #777;
+        color: #707070ff;
       }
 
       .header-center {
         position: absolute;
         left: 50%;
+        /*
+        Code copied from: https: https//www.w3schools.com/cssref/css3_pr_transform.php
+        Author: W3Schools
+        Name: CSS transform Property
+        Description: The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.
+        Date retrieved: 2024-12-04
+        */
         transform: translateX(-50%);
         display: flex;
         gap: 60px;
@@ -80,47 +101,53 @@
 
       .header-center a {
         text-decoration: none;
-        color: #333;
-        font-weight: bold;
         font-size: 1.1rem;
         position: relative;
       }
 
-      .header-center a:first-child.active::before {
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #333;
+      .header-center a.active {
+        font-weight: bold;
+        text-decoration: overline 2px;
       }
 
-      .header-center a.active {
-        color: #000;
+      .header-right {
+        margin-left: auto;
+        font-size: 1.5rem;
+        display: flex;
+        gap: 30px;
       }
 
       .header-right a {
-        color: #333;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 1.5rem;
+        /*
+        Code copied from: https: https//www.w3schools.com/css/css3_transitions.asp
+        Author: W3Schools
+        Name: CSS Transitions
+        Description: CSS transitions allows you to change property values smoothly, over a given duration.
+        Date retrieved: 2024-12-04
+        */
         transition: color 0.3s;
         display: flex;
         align-items: center;
       }
 
-      .header-right a:hover {
-        color: #005582;
-      }
-
-      .header-center a:hover {
-        background-color: #f6f6f6;
-      }
-
       a:hover {
-        background-color: #f6f6f6;
-        transition: background-color 0.3s ease;
+        /*
+        Code copied from: https: https://www.w3schools.com/css/css_important.asp
+        Author: W3Schools
+        Name: CSS The !important Rule
+        Description: The !important rule in CSS is used to add more importance to a property/value than normal.
+        Date retrieved: 2024-12-04
+        */
+        color: #008F11 !important;
+        /*
+        Code copied from: https://www.w3schools.com/css/css3_transitions.asp
+        Author: W3Schools
+        Name: CSS Transitions
+        Description: CSS transitions allows you to change property values smoothly, over a given duration.
+        Date retrieved: 2024-12-04
+        */
+        transition: color 0.3s ease;
       }
 
       .project-showcase {
@@ -253,81 +280,106 @@
       .footer {
         padding: 20px 60px;
         font-size: 1rem;
-        color: #666;
+        color: #707070ff;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
         background-color: transparent;
-        font-family: 'Roboto', sans-serif;
         position: relative;
+        margin-top: auto;
+        font-family: 'Roboto', sans-serif;
       }
 
-      .footer::before {
+      .footer:before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        top: 0px;
+        left: 0px;
+        right: 0px;
         height: 2px;
-        background-color: #f6f6f6;
+        background-color: #292929ff;
       }
 
-      .footer .footer-section {
+      .footer-section {
         display: flex;
         flex-direction: column;
         margin-right: 40px;
       }
 
-      .footer .footer-section a {
-        color: #333;
+      .footer-section a {
         text-decoration: none;
         font-weight: bold;
         font-size: 1.1rem;
         margin-bottom: 10px;
       }
 
-      .footer .footer-section a:hover {
-        background-color: #f6f6f6;
-      }
-
-      .footer .footer-section strong {
+      /*
+        Code copied from: https://www.w3schools.com/tags/tag_strong.asp
+        Author: W3Schools
+        Name: HTML <strong> Tag
+        Description: The <strong> tag is used to define text with strong importance. The content inside is typically displayed in bold.
+        Date retrieved: 2024-12-04
+        */
+      .footer-section strong {
+        color: #707070ff;
         margin-bottom: 10px;
       }
 
-      .footer .contact-message {
+      .contact-message {
         text-align: left;
         font-size: 1.2rem;
-        color: #555;
+        color: #707070ff;
         margin-right: 40px;
       }
 
-      .footer .email {
+      .email {
         text-align: left;
         font-size: 1rem;
-        color: #333;
-        margin-top: 5px;
+        text-decoration: underline dotted;
       }
 
-      .footer .last-updated {
+      .last-updated {
         font-size: 1rem;
-        color: #888;
+        color: #707070ff;
         margin-right: 40px;
+      }
+
+      .header h1 a {
+        text-decoration: none;
+      }
+
+      .header h2 a {
+        color: #707070ff;
+        text-decoration: none;
+      }
+
+      @media (max-width: 767px) {
+        .header {
+          padding-right: 60px;
+        }
+
+        .header-center {
+          display: none;
+        }
       }
     </style>
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
       <div class="header-left">
-        <h1>Halloween Diptych</h1>
-        <h2>Giancarlo A. Haidar</h2>
+        <h1><a href="https://giancarloahaidar.github.io/giancarloh-show/" target="_self">
+            Halloween Diptych
+          </a></h1>
+        <h2><a href="https://giancarloahaidar.github.io/giancarloh-tell/" target="_self">Giancarlo A. Haidar</a></h2>
       </div>
       <div class="header-center">
-        <a href="#SHOW" target="_self" class="active">Show</a>
-        <a href="#TELL" target="_self">Tell</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-show/" target="_self" class="active">Show</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-tell/" target="_self">Tell</a>
       </div>
       <div class="header-right">
-        <a href="index.html" target="_self">X</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-show/" target="_self">X</a>
       </div>
     </header>
 
@@ -336,7 +388,6 @@
       <div class="project-image-placeholder">
         <img src="Diptych Poster.jpg" alt="Diptych Poster featuring creative visuals">
       </div>
-
       <div class="project-layout">
         <!-- Left Column: Sticky Description -->
         <div class="project-description">
@@ -347,9 +398,7 @@
           </ul>
         </div>
 
-        <!-- Right Column: Details and Images -->
         <div class="project-details-and-images">
-          <!-- Details Row -->
           <div class="project-details">
             <div class="details-row">
               <div class="details-item">
@@ -370,7 +419,6 @@
               </div>
             </div>
           </div>
-          <!-- Images with Left-Aligned Captions -->
           <div class="project-pdf-placeholder">
             <figure>
               <img src="Diptych Poster Left.jpg" alt="Left side of the Halloween Diptych poster">
@@ -385,11 +433,12 @@
       </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-section">
         <strong>Main</strong>
-        <a href="#work">Show</a>
-        <a href="#about">Tell</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-show/" target="_self">Show</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-tell/" target="_self">Tell</a>
       </div>
       <div class="footer-section">
         <strong>Contact</strong>
@@ -398,10 +447,10 @@
       </div>
       <div class="contact-message">
         Let's have a coffee chat! <br>
-        <a href="mailto:giancarlo.a.haidar@gmail.com" class="email">giancarlo.a.haidar@gmail.com</a>
+        <a href="mailto:ghaidar@uwaterloo.ca" class="email">ghaidar@uwaterloo.ca</a>
       </div>
       <div class="last-updated">
-        LAST UPDATED 2024-11-10
+        LAST UPDATED 2024-12-06
       </div>
     </footer>
   </body>
