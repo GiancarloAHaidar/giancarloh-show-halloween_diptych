@@ -145,15 +145,12 @@
         transition: color 0.3s ease;
       }
 
-
-
-
       .project-showcase {
+        width: 100%;
         padding: 40px 60px;
       }
 
       .project-image-placeholder {
-        width: 100%;
         margin: 0px auto 20px;
       }
 
@@ -167,6 +164,7 @@
 
       .project-layout {
         display: flex;
+        gap: 20px;
       }
 
       .project-description {
@@ -175,9 +173,21 @@
         text-align: left;
         position: sticky;
         top: 100px;
+        /*
+        Code copied from: https://www.w3schools.com/cssref/func_calc.php
+        Name: CSS calc() Function
+        Description: The CSS calc() function performs a calculation to be used as the property value.
+        Date retrieved: 2024-12-06
+        */
         max-height: calc(100vh - 120px);
         overflow-y: auto;
         padding: 20px;
+      }
+
+      ul li:before {
+        content: '★';
+        position: absolute;
+        left: 0;
       }
 
       .project-details-and-images {
@@ -189,7 +199,6 @@
 
       .project-details {
         padding: 20px 0px;
-        font-family: 'Roboto', sans-serif;
       }
 
       .details-row {
@@ -200,14 +209,13 @@
 
       .details-item {
         flex: 1 1 200px;
-        margin-right: 20px;
       }
 
       .details-label {
         display: block;
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: bold;
-        color: #777;
+        color: #707070ff;
         text-transform: uppercase;
         margin-bottom: 5px;
       }
@@ -215,12 +223,11 @@
       .details-value {
         font-size: 1rem;
         font-weight: 600;
-        color: #333;
-        line-height: 1.4;
+        line-height: 1.5;
       }
 
       .details-value br {
-        line-height: 1.8;
+        line-height: 6;
         /* Adds extra spacing between multiple lines */
       }
 
@@ -229,44 +236,30 @@
         flex-direction: column;
         gap: 20px;
         width: 100%;
-        /* Matches the width of the project-details */
-      }
-
-      .project-pdf-placeholder figure {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        /* Align captions to the left */
-        text-align: left;
-        /* Align text within captions to the left */
       }
 
       .project-pdf-placeholder img {
         width: 100%;
-        /* Aligns with the width of the project-details */
         height: auto;
         border-radius: 10px;
-        border-left: 1px solid rgb(246, 246, 246);
-        border-right: 1px solid rgb(246, 246, 246);
+        border-left: 1px solid #707070ff;
+        border-right: 1px solid #707070ff;
       }
 
+      /*
+        Code copied from: https://www.w3schools.com/tags/tag_figcaption.asp
+        Author: W3Schools
+        Name: HTML <figcaption> Tag
+        Description: The <strong> tag is used to define text with strong importance. The content inside is typically displayed in bold.
+        Date retrieved: 2024-12-0
+        */
       .project-pdf-placeholder figcaption {
         margin-top: 20px;
-        font-size: 0.85rem;
-        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
         color: #666;
+        text-transform: uppercase;
         text-align: left;
-        /* Align text to the left */
-        padding: 5px;
-        letter-spacing: 1px;
-        background-color: transparent;
-        /* Removed background */
       }
-
-
-
 
       .footer {
         padding: 20px 60px;
@@ -333,6 +326,7 @@
       .last-updated {
         font-size: 1rem;
         color: #707070ff;
+        text-transform: uppercase;
         margin-right: 40px;
       }
 
@@ -361,6 +355,7 @@
     </style>
   </head>
   <body>
+
     <!-- Header -->
     <header class="header">
       <div class="header-left">
@@ -379,12 +374,10 @@
     </header>
 
     <div class="container project-showcase">
-      <!-- Diptych Poster Image -->
       <div class="project-image-placeholder">
-        <img src="Diptych Poster.jpg" alt="Diptych Poster featuring creative visuals">
+        <img src="Diptych Poster.jpg" alt="Diptych Poster">
       </div>
       <div class="project-layout">
-        <!-- Left Column: Sticky Description -->
         <div class="project-description">
           <ul>
             <li>
@@ -398,30 +391,30 @@
             <div class="details-row">
               <div class="details-item">
                 <span class="details-label">Role</span>
-                <span class="details-value">Design Consultant</span>
+                <span class="details-value">Graphic Designer</span>
               </div>
               <div class="details-item">
                 <span class="details-label">Collaborators</span>
-                <span class="details-value">Jerry Yue (CEO)<br>Gleb Kuznetsov</span>
+                <span class="details-value">Giovanna Malatesta<br></span>
               </div>
               <div class="details-item">
                 <span class="details-label">Duration</span>
-                <span class="details-value">2020-2021</span>
+                <span class="details-value">2024-2024</span>
               </div>
               <div class="details-item">
                 <span class="details-label">Tools</span>
-                <span class="details-value">Figma<br>Origami Studio</span>
+                <span class="details-value">Adobe Photoshop<br>Adobe Illustrator</span>
               </div>
             </div>
           </div>
           <div class="project-pdf-placeholder">
             <figure>
-              <img src="Diptych Poster Left.jpg" alt="Left side of the Halloween Diptych poster">
-              <figcaption>DIPTYCH POSTER LEFT</figcaption>
+              <img src="Diptych Poster Left.jpg" alt="Poster Left">
+              <figcaption>Poster Left</figcaption>
             </figure>
             <figure>
-              <img src="Diptych Poster Right.jpg" alt="Right side of the Halloween Diptych poster">
-              <figcaption>DIPTYCH POSTER RIGHT</figcaption>
+              <img src="Diptych Poster Right.jpg" alt="Poster Right">
+              <figcaption>Poster Right</figcaption>
             </figure>
           </div>
         </div>
@@ -445,7 +438,7 @@
         <a href="mailto:ghaidar@uwaterloo.ca" class="email">ghaidar@uwaterloo.ca</a>
       </div>
       <div class="last-updated">
-        LAST UPDATED 2024-12-09
+        Last Updated 2024-12-09
       </div>
     </footer>
   </body>
