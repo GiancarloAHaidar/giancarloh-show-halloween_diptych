@@ -147,6 +147,7 @@
       .project-showcase {
         width: 100%;
         padding: 40px 60px;
+        overflow: visible;
       }
 
       .project-image-placeholder {
@@ -163,6 +164,7 @@
 
       .project-layout {
         display: flex;
+        align-items: flex-start;
       }
 
       .project-description {
@@ -171,14 +173,14 @@
         text-align: left;
         position: sticky;
         top: 100px;
-        max-height: calc(100vh - 120px);
+
         /*
         Code copied from: https://www.w3schools.com/cssref/func_calc.php
         Name: CSS calc() Function
         Description: The CSS calc() function performs a calculation to be used as the property value.
         Date retrieved: 2024-12-06
         */
-        overflow: auto;
+
         padding: 20px;
         padding-right: 40px;
         padding-bottom: 10px;
